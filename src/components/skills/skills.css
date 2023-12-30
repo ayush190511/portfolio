@@ -1,0 +1,185 @@
+#skills {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    cursor: default;
+    z-index: -10;
+}
+
+#skills>h1 {
+    font-size: 3rem;
+}
+
+.headtag {
+    text-decoration: underline;
+}
+
+.subheading{
+    padding-bottom: 3rem;
+    font-weight: 400;
+}
+
+
+.cards {
+    display: flex;
+    width: 88vw;
+    justify-content: center;
+}
+
+.card {
+    width: 25rem;
+    height: fit-content;
+    padding: 1rem 2rem;
+    margin: 1rem 1rem;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(78, 78, 78);
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+.card:hover{
+    width: 26rem;
+    height: fit-content;
+    border: 2px solid white;
+    box-shadow: 0px 0px 18px 0 red;
+    transition-duration: .2s;
+}
+
+.card>h2 {
+    text-decoration: underline;
+    margin: .6rem;
+    padding-bottom: .8rem;
+    font-size: 1.3rem;
+}
+.card>.content {
+    display: grid;
+    grid-template-columns: repeat(2, 8rem);
+}
+.card>.content>p1{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.card>.content>p {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: 400;
+}
+
+.level{
+    height: 1.1vh;
+    width: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    border: 1px solid white;
+    position: relative;
+}
+.sublevel90{
+    height: 1vh;
+    width: 3rem;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+.sublevel80{
+    height: 1vh;
+    width: 2.75rem;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+.sublevel60{
+    height: 1vh;
+    width: 2.25rem;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:961px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        width: fit-content;
+        width: 19rem;
+    }
+    .card:hover{
+        width: 20rem;
+        border: 2px solid white;
+        box-shadow: 0px 0px 18px 0 red;
+        transition-duration: .2s;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        width: fit-content;
+    }
+    .card>h2{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:717px){
+    #skills{
+        justify-content: center;
+        align-items: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-content: center;
+    }
+}
+
+@media screen and (max-width:320px){
+    #skills{
+        justify-content: center;
+        align-items: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-content: center;
+    }
+    .card{
+        margin: 0.5rem;
+        width: 18rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .card:hover{
+        width: 19rem;
+        border: 2px solid white;
+        box-shadow: 0px 0px 18px 0 red;
+        transition-duration: .2s;
+    }
+    .cards:hover{
+        align-items: center;
+        justify-content: center;
+    }
+
+}

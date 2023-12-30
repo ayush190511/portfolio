@@ -1,0 +1,130 @@
+.about{
+    height: 100%;
+    margin-bottom: 2rem;
+    margin: 0 6vw;
+}
+
+#about>h1{
+    padding-top: 4rem;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 3rem;
+    cursor: default;
+}
+.about-subtitle{
+    text-align: center;
+    padding-bottom: 3rem;
+    cursor: default;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+}
+
+.about-img{
+    width: 20rem;
+    border-radius: 1.5rem;
+    justify-self: center;
+}
+
+.about-info{
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-box{
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 0.75rem;
+    text-align: center;
+    padding: 1rem 1.25rem;
+    cursor: default;
+}
+
+.about-icon{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5vh;
+}
+
+.about-title{
+    font-size: small;
+    font-weight: 500;
+}
+
+.about-sub-info{
+    font-size: small;
+}
+
+.about-description{
+    padding: 0 4rem 0 0;
+    margin-bottom: 1rem;
+}
+
+.button-flex>button{
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 3rem;
+    width: 10rem;
+}
+
+.button-flex>button:hover{
+    box-shadow: 0 0 2rem 0px red;
+    font-weight: 600;
+    transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+    .about-container{
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .about-img{
+        width: 18rem;
+    }
+
+    .about-box{
+        padding: 0.75rem 0.5rem;
+    }
+
+    .about-data{
+        text-align: center;
+    }
+
+    .about-info{
+        justify-content: center;
+    }
+
+    .about-description{
+        padding: 0 5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about-subtitle{
+        margin-bottom: 3vh;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .about-info{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-description{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .about-info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

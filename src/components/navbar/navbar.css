@@ -1,0 +1,106 @@
+.nav-wrapper{
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    backdrop-filter: blur(50px);
+    border-bottom: 1px solid white;
+}
+
+.home-icons{
+    display: none;
+}
+
+.nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    margin: 0 6rem;
+}
+
+.logo>a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.devil{
+    color: red;
+}
+
+.nav-content ul{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.nav-content li{
+    margin: 0 1rem;
+}
+
+.menu-item{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    color: red;
+    transition: ease .3s;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-wrapper{
+        min-height: 3rem;
+        width: 100%;
+    }
+    .home-icons{
+        display: block;
+    }
+    .nav-content ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .nav-content ul.open{
+        display: flex;
+
+    }
+    .nav-content>ul>li>a{
+        display: flex;
+        font-size: 1rem;
+        margin: 0.2rem 0.75rem;
+    }
+    .apps, .cross{
+        position: absolute;
+        top: 2vh;
+        font-size: 1.5rem;
+        right: 1vw;
+        display: block;
+    }
+    .apps.close{
+        display: none;
+    }
+    .cross{
+        display: none;
+    }
+    .cross.open{
+        display: block;
+    }
+    .logo{
+        position: absolute;
+        top: .5vh;
+        left: 1vw;
+    }
+}
