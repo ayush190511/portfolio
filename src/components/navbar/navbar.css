@@ -68,14 +68,18 @@
         display: block;
     }
     .nav-content ul{
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         margin-top: 2rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     }
     .nav-content ul.open{
-        display: flex;
-
+        max-height: 200px;
+        opacity: 1;
     }
     .nav-content>ul>li>a{
         display: flex;
@@ -84,7 +88,7 @@
     }
     .apps, .cross{
         position: absolute;
-        top: 2vh;
+        top: .2rem;
         font-size: 1.5rem;
         right: 1vw;
         display: block;
@@ -102,5 +106,18 @@
         position: absolute;
         top: .5vh;
         left: 1vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .nav-content>ul>li>a{
+        font-size: .7rem;
+        margin: 0.1rem 0.25rem;
+    }
+    .logo>a{
+        font-size: 1rem;
+    }
+    .apps{
+        top: .1rem;
     }
 }

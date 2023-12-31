@@ -5,12 +5,14 @@ import Skills from "./components/skills/Skills";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import Scroll from "./components/scroller/Scroll";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <div className="main">
+        <Scroll/>
         <Home />
         <Skills />
         <About/>
